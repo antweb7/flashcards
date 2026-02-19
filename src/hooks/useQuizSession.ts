@@ -19,13 +19,17 @@ function getTargetValue(item: VocabEntry, dir: QuizDirection): string {
   return dir === "es-en" ? item.en : item.es;
 }
 
+/**
+ * Build 4 options (1 correct + 3 distractors). Uses fullVocab as the pool for
+ * distractors so we always have enough even when the run has only 1 item (e.g. Improve with 1 wrong).
+ */
 function buildOptions(
-  items: VocabEntry[],
+  fullVocab: VocabEntry[],
   currentItem: VocabEntry,
   dir: QuizDirection
 ): string[] {
   const { correct } = getPromptAndCorrect(currentItem, dir);
-  const others = items.filter((i) => i.id !== currentItem.id);
+  const others = fullVocab.filter((i) => i.id !== currentItem.id);
   const candidateValues = others.map((i) => getTargetValue(i, dir));
   const uniqueCandidates = Array.from(new Set(candidateValues));
   const chosen = new Set<string>([correct]);
@@ -45,6 +49,7 @@ function buildOptions(
 
 export interface QuizSessionState {
   items: VocabEntry[];
+  fullVocab: VocabEntry[];
   shuffledOrder: number[];
   currentIndex: number;
   currentItem: VocabEntry | null;
@@ -81,10 +86,11 @@ export function useQuizSession(
       const firstIndex = shuffled[0];
       const firstItem = items[firstIndex];
       const { correct } = getPromptAndCorrect(firstItem, direction);
-      const options = buildOptions(items, firstItem, direction);
+      const options = buildOptions(vocab, firstItem, direction);
 
       setState({
         items,
+        fullVocab: vocab,
         shuffledOrder: shuffled,
         currentIndex: 0,
         currentItem: firstItem,
@@ -142,7 +148,7 @@ export function useQuizSession(
           const itemIndex = prev.shuffledOrder[nextIndex];
           const nextItem = prev.items[itemIndex];
           const { correct } = getPromptAndCorrect(nextItem, prev.direction);
-          const options = buildOptions(prev.items, nextItem, prev.direction);
+          const options = buildOptions(prev.fullVocab, nextItem, prev.direction);
           return {
             ...prev,
             currentIndex: nextIndex,
