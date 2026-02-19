@@ -1,0 +1,22 @@
+[
+  { "id": "polo_shirt", "es": "el polo", "en": "polo shirt" },
+  { "id": "t_shirt", "es": "la camiseta", "en": "t-shirt" },
+  { "id": "shirt", "es": "la camisa", "en": "shirt" },
+  { "id": "jacket", "es": "la chaqueta", "en": "jacket" },
+  { "id": "coat", "es": "el abrigo", "en": "coat" },
+  { "id": "sweater", "es": "el jersey", "en": "sweater" },
+  { "id": "trousers", "es": "los pantalones", "en": "trousers" },
+  { "id": "jeans", "es": "los vaqueros", "en": "jeans" },
+  { "id": "skirt", "es": "la falda", "en": "skirt" },
+  { "id": "dress", "es": "el vestido", "en": "dress" },
+  { "id": "shoes", "es": "los zapatos", "en": "shoes" },
+  { "id": "boots", "es": "las botas", "en": "boots" },
+  { "id": "sneakers", "es": "las zapatillas", "en": "sneakers" },
+  { "id": "hat", "es": "el sombrero", "en": "hat" },
+  { "id": "scarf", "es": "la bufanda", "en": "scarf" },
+  { "id": "socks", "es": "los calcetines", "en": "socks" },
+  { "id": "belt", "es": "el cinturón", "en": "belt" },
+  { "id": "cap", "es": "la gorra", "en": "cap" },
+  { "id": "suit", "es": "el traje", "en": "suit" },
+  { "id": "tie", "es": "la corbata", "en": "tie" }
+]
