@@ -1,0 +1,18 @@
+{
+    "title": "Los sabores",
+    "description": "Food descriptions",
+    "vocab": [
+      {"id": "aceitoso", "es": "aceitoso", "en": "oily"},
+      {"id": "acido", "es": "ácido", "en": "acid"},
+      {"id": "amargo", "es": "amargo", "en": "bitter"},
+      {"id": "avinagrado", "es": "avinagrado", "en": "vinegary"},
+      {"id": "chamuscado", "es": "chamuscado", "en": "singed"},
+      {"id": "caducado", "es": "caducado", "en": "expired"},
+      {"id": "empalagoso", "es": "empalagoso", "en": "oversweet"},
+      {"id": "insipido", "es": "insípido", "en": "tasteless"},
+      {"id": "rancio", "es": "rancio", "en": "rancid"},
+      {"id": "soso", "es": "soso", "en": "bland"},
+      {"id": "jugoso", "es": "jugoso", "en": "juicy"},
+      {"id": "pesado", "es": "pesado", "en": "heavy"}
+    ]
+  }

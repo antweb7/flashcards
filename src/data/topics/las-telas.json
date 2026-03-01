@@ -1,0 +1,17 @@
+{
+    "title": "Las telas",
+    "description": "Fabrics and materials",
+    "vocab": [
+      {"id": "algodon", "es": "algodón", "en": "cotton"},
+      {"id": "lana", "es": "lana", "en": "wool"},
+      {"id": "seda", "es": "seda", "en": "silk"},
+      {"id": "lino", "es": "lino", "en": "linen"},
+      {"id": "cuero", "es": "cuero", "en": "leather"},
+      {"id": "cachemira", "es": "cachemira", "en": "cashmere"},
+      {"id": "nylon", "es": "nylon", "en": "nylon"},
+      {"id": "viscosa", "es": "viscosa", "en": "viscose"},
+      {"id": "terciopelo", "es": "terciopelo", "en": "velvet"},
+      {"id": "franela", "es": "franela", "en": "flannel"},
+      {"id": "pana", "es": "pana", "en": "corduroy"}
+    ]
+  }
