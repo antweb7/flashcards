@@ -1,0 +1,44 @@
+{
+    "title": "La comida",
+    "description": "Food and ingredients",
+    "vocab": [
+      {"id": "lechuga", "es": "lechuga", "en": "lettuce"},
+      {"id": "cebollas", "es": "cebollas", "en": "onions"},
+      {"id": "pimientos", "es": "pimientos", "en": "peppers"},
+      {"id": "ajos", "es": "ajos", "en": "garlic"},
+      {"id": "soja", "es": "soja", "en": "soy"},
+      {"id": "tomates", "es": "tomates", "en": "tomatoes"},
+      {"id": "guisantes", "es": "guisantes", "en": "peas"},
+      {"id": "patatas", "es": "patatas", "en": "potatoes"},
+  
+      {"id": "sandia", "es": "sandía", "en": "watermelon"},
+      {"id": "melocotones", "es": "melocotones", "en": "peaches"},
+      {"id": "naranjas", "es": "naranjas", "en": "oranges"},
+      {"id": "uvas", "es": "uvas", "en": "grapes"},
+      {"id": "manzanas", "es": "manzanas", "en": "apples"},
+  
+      {"id": "chorizo", "es": "chorizo", "en": "chorizo"},
+      {"id": "jamon", "es": "jamón", "en": "ham"},
+      {"id": "ternera", "es": "ternera", "en": "beef"},
+      {"id": "morcilla", "es": "morcilla", "en": "black pudding"},
+      {"id": "pollo", "es": "pollo", "en": "chicken"},
+  
+      {"id": "bacalao", "es": "bacalao", "en": "cod"},
+      {"id": "sardinas", "es": "sardinas", "en": "sardines"},
+      {"id": "atun", "es": "atún", "en": "tuna"},
+      {"id": "merluza", "es": "merluza", "en": "hake"},
+      {"id": "truchas", "es": "truchas", "en": "trout"},
+  
+      {"id": "gambas", "es": "gambas", "en": "prawns"},
+      {"id": "langostinos", "es": "langostinos", "en": "king prawns"},
+      {"id": "mejillones", "es": "mejillones", "en": "mussels"},
+      {"id": "almejas", "es": "almejas", "en": "clams"},
+  
+      {"id": "azafran", "es": "azafrán", "en": "saffron"},
+      {"id": "perejil", "es": "perejil", "en": "parsley"},
+      {"id": "pimienta", "es": "pimienta", "en": "pepper"},
+  
+      {"id": "lentejas", "es": "lentejas", "en": "lentils"},
+      {"id": "garbanzos", "es": "garbanzos", "en": "chickpeas"}
+    ]
+  }

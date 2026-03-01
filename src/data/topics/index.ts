@@ -1,6 +1,3 @@
-import laRopa from "./la-ropa.json";
-import laPersonalidad from "./la-personalidad.json";
-
 export interface VocabEntry {
   id: string;
   es: string;
@@ -13,24 +10,25 @@ export interface TopicFile {
   vocab: VocabEntry[];
 }
 
-// Add new topics here: import + add to topicFiles. Title, description, count come from the JSON.
-const topicFiles: Record<string, TopicFile> = {
-  "la-ropa": laRopa as TopicFile,
-  "la-personalidad": laPersonalidad as TopicFile,
-};
+// Auto-discover all topic JSON files in this directory
+const ctx = require.context("./", false, /^\.\/[^/]+\.json$/);
 
 const topicData: Record<string, VocabEntry[]> = {};
 const topics: { slug: string; title: string; description?: string; count: number }[] = [];
 
-for (const [slug, data] of Object.entries(topicFiles)) {
-  topicData[slug] = data.vocab;
-  topics.push({
-    slug,
-    title: data.title,
-    description: data.description,
-    count: data.vocab.length,
-  });
-}
+ctx.keys().forEach((path) => {
+  const slug = path.replace(/^\.\//, "").replace(/\.json$/, "");
+  const data = ctx(path) as TopicFile;
+  if (data?.vocab && Array.isArray(data.vocab)) {
+    topicData[slug] = data.vocab;
+    topics.push({
+      slug,
+      title: data.title,
+      description: data.description,
+      count: data.vocab.length,
+    });
+  }
+});
 
 export type TopicSlug = keyof typeof topicData;
 
