@@ -71,7 +71,7 @@ export function CompletionCard({
           <button
             type="button"
             onClick={onImproveWrong}
-            className="min-h-12 rounded-xl bg-[#1db954]/20 font-medium text-[#1db954] transition hover:bg-[#1db954]/30 focus:outline-none focus:ring-2 focus:ring-[#1db954] focus:ring-offset-2 focus:ring-offset-[#282828]"
+            className="min-h-12 rounded-xl bg-red-500/20 font-medium text-red-500 transition hover:bg-red-500/30 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-[#282828]"
           >
             Improve (Wrong Only)
           </button>
