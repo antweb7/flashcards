@@ -1,0 +1,32 @@
+{
+  "title": "La personalidad",
+  "description": "Personality traits",
+  "vocab": [
+    {"id": "ahorrador", "es": "ahorrador", "en": "thrifty"},
+    {"id": "alocado", "es": "alocado", "en": "crazy (in a fun way)"},
+    {"id": "campechano", "es": "campechano", "en": "cheerful"},
+    {"id": "chiflado", "es": "chiflado", "en": "crazy"},
+    {"id": "celoso", "es": "celoso", "en": "jealous"},
+    {"id": "condescendiente", "es": "condescendiente", "en": "condescending"},
+    {"id": "dicharachero", "es": "dicharachero", "en": "talkative"},
+    {"id": "engreido", "es": "engreído", "en": "cocky"},
+    {"id": "fanfarron", "es": "fanfarrón", "en": "boastful"},
+    {"id": "holgazan", "es": "holgazán", "en": "lazy"},
+    {"id": "parlanchin", "es": "parlanchín", "en": "chatterbox"},
+    {"id": "remolon", "es": "remolón", "en": "lazy"},
+    {"id": "tramposo", "es": "tramposo", "en": "cheater"},
+    {"id": "tiquismiquis", "es": "tiquismiquis", "en": "picky"},
+    {"id": "pijo", "es": "pijo", "en": "posh"},
+    {"id": "sencillo", "es": "sencillo", "en": "simple"},
+    {"id": "intransigente", "es": "intransigente", "en": "uncompromising"},
+    {"id": "cuerdo", "es": "cuerdo", "en": "sane"},
+    {"id": "trabajador", "es": "trabajador", "en": "hard-working"},
+    {"id": "confiable", "es": "confiable", "en": "trustworthy"},
+    {"id": "flexible", "es": "flexible", "en": "flexible"},
+    {"id": "soso", "es": "soso", "en": "bland"},
+    {"id": "activo", "es": "activo", "en": "active"},
+    {"id": "honesto", "es": "honesto", "en": "honest"},
+    {"id": "sonador", "es": "soñador", "en": "dreamer"},
+    {"id": "luchador", "es": "luchador", "en": "fighter"}
+  ]
+}

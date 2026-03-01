@@ -1,4 +1,5 @@
 import laRopa from "./la-ropa.json";
+import laPersonalidad from "./la-personalidad.json";
 
 export interface VocabEntry {
   id: string;
@@ -6,18 +7,37 @@ export interface VocabEntry {
   en: string;
 }
 
-const topicData: Record<string, VocabEntry[]> = {
-  "la-ropa": laRopa as VocabEntry[],
+export interface TopicFile {
+  title: string;
+  description?: string;
+  vocab: VocabEntry[];
+}
+
+// Add new topics here: import + add to topicFiles. Title, description, count come from the JSON.
+const topicFiles: Record<string, TopicFile> = {
+  "la-ropa": laRopa as TopicFile,
+  "la-personalidad": laPersonalidad as TopicFile,
 };
+
+const topicData: Record<string, VocabEntry[]> = {};
+const topics: { slug: string; title: string; description?: string; count: number }[] = [];
+
+for (const [slug, data] of Object.entries(topicFiles)) {
+  topicData[slug] = data.vocab;
+  topics.push({
+    slug,
+    title: data.title,
+    description: data.description,
+    count: data.vocab.length,
+  });
+}
 
 export type TopicSlug = keyof typeof topicData;
 
-export const topics: { slug: TopicSlug; title: string; description?: string; count: number }[] = [
-  { slug: "la-ropa", title: "La ropa", description: "Clothing", count: topicData["la-ropa"].length },
-];
+export { topics };
 
 export function getTopicVocab(slug: string): VocabEntry[] | null {
-  const vocab = topicData[slug as TopicSlug];
+  const vocab = topicData[slug];
   return vocab ?? null;
 }
 
