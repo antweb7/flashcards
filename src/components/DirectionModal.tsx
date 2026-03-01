@@ -65,38 +65,38 @@ export function DirectionModal({ topicTitle, onChoose, onClose }: DirectionModal
       role="dialog"
       aria-modal="true"
       aria-labelledby="direction-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
       onClick={handleOverlayClick}
     >
       <div
         ref={containerRef}
-        className="relative w-full max-w-md rounded-2xl border border-zinc-200 bg-white p-6 shadow-xl"
+        className="relative w-full max-w-md rounded-2xl bg-[#282828] p-6 shadow-2xl border border-[#333]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 rounded p-1 text-zinc-400 hover:bg-zinc-100 hover:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-400"
+          className="absolute right-4 top-4 rounded p-1 text-[#b3b3b3] hover:bg-[#3e3e3e] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#1db954]"
           aria-label="Close"
         >
           <span className="text-xl leading-none">×</span>
         </button>
-        <h2 id="direction-modal-title" className="pr-8 text-xl font-semibold text-zinc-900">
+        <h2 id="direction-modal-title" className="pr-8 text-xl font-semibold text-white">
           Choose direction
         </h2>
-        <p className="mt-1 text-sm text-zinc-500">{topicTitle}</p>
+        <p className="mt-1 text-sm text-[#b3b3b3]">{topicTitle}</p>
         <div className="mt-6 flex flex-col gap-3">
           <button
             type="button"
             onClick={() => onChoose("es-en")}
-            className="min-h-12 rounded-xl border border-zinc-200 bg-white px-4 py-3 text-left font-medium text-zinc-900 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2"
+            className="min-h-12 rounded-xl bg-[#181818] px-4 py-3 text-left font-medium text-white transition hover:bg-[#3e3e3e] focus:outline-none focus:ring-2 focus:ring-[#1db954] focus:ring-offset-2 focus:ring-offset-[#282828]"
           >
             Spanish → English
           </button>
           <button
             type="button"
             onClick={() => onChoose("en-es")}
-            className="min-h-12 rounded-xl border border-zinc-200 bg-white px-4 py-3 text-left font-medium text-zinc-900 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2"
+            className="min-h-12 rounded-xl bg-[#181818] px-4 py-3 text-left font-medium text-white transition hover:bg-[#3e3e3e] focus:outline-none focus:ring-2 focus:ring-[#1db954] focus:ring-offset-2 focus:ring-offset-[#282828]"
           >
             English → Spanish
           </button>

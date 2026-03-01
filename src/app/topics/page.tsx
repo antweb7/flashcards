@@ -24,10 +24,11 @@ export default function TopicsPage() {
   const handleCloseModal = () => setModalTopic(null);
 
   return (
-    <div className="min-h-screen bg-zinc-50">
-      <main className="mx-auto max-w-2xl px-4 py-8">
-        <h1 className="text-2xl font-bold text-zinc-900">Spanish Topics</h1>
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="min-h-screen bg-[#121212]">
+      <main className="mx-auto max-w-2xl px-4 py-8 sm:px-8">
+        <h1 className="text-2xl font-bold text-white">Spanish Topics</h1>
+        <p className="mt-1 text-[#b3b3b3]">Pick a topic to start a quiz</p>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {topics.map((t) => (
             <TopicCard
               key={t.slug}

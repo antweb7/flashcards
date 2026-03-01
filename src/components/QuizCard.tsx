@@ -22,8 +22,8 @@ export function QuizCard({
   disabled,
 }: QuizCardProps) {
   return (
-    <div className="w-full rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-      <p className="mb-6 text-2xl font-medium text-zinc-900" lang={promptLang}>
+    <div className="w-full rounded-2xl bg-[#282828] p-6">
+      <p className="mb-6 text-2xl font-medium text-white" lang={promptLang}>
         {prompt}
       </p>
       <div className="flex flex-col gap-3">
@@ -33,9 +33,9 @@ export function QuizCard({
           const showCorrect = selectedOption !== null && isCorrectOption;
           const showWrong = selectedOption !== null && isSelected && !isCorrect;
 
-          let bg = "bg-white border-zinc-200 hover:bg-zinc-50";
-          if (showCorrect) bg = "bg-emerald-50 border-emerald-500";
-          if (showWrong) bg = "bg-red-50 border-red-500";
+          let bg = "bg-[#181818] hover:bg-[#3e3e3e]";
+          if (showCorrect) bg = "bg-emerald-500/20 ring-2 ring-emerald-500";
+          if (showWrong) bg = "bg-red-500/20 ring-2 ring-red-500";
 
           return (
             <button
@@ -43,15 +43,12 @@ export function QuizCard({
               type="button"
               disabled={disabled}
               onClick={() => onSelect(option)}
-              className={`min-h-12 rounded-xl border px-4 py-3 text-left font-medium transition focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 disabled:cursor-default ${bg}`}
+              className={`min-h-12 rounded-xl px-4 py-3 text-left font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-[#1db954] focus:ring-offset-2 focus:ring-offset-[#282828] disabled:cursor-default ${bg}`}
               aria-label={`Option ${index + 1}: ${option}`}
               aria-pressed={isSelected}
             >
               <span className="flex items-center justify-between gap-2">
-                <span>
-                  <span className="mr-2 text-zinc-500">{index + 1}.</span>
-                  {option}
-                </span>
+                <span>{option}</span>
                 {selectedOption !== null && isSelected && (
                   <span aria-hidden>{isCorrect ? "✅" : "❌"}</span>
                 )}
@@ -61,12 +58,12 @@ export function QuizCard({
         })}
       </div>
       {selectedOption !== null && (
-        <p className="mt-4 text-sm text-zinc-600" role="status">
+        <p className="mt-4 text-sm text-[#b3b3b3]" role="status">
           {isCorrect ? (
-            <>Correct ✅</>
+            <span className="text-emerald-500">Correct ✅</span>
           ) : (
             <>
-              Wrong ❌ Correct answer: <strong>{correctOption}</strong>
+              Wrong ❌ Correct answer: <strong className="text-white">{correctOption}</strong>
             </>
           )}
         </p>

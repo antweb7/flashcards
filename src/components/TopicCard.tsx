@@ -11,11 +11,13 @@ export function TopicCard({ title, count, onClick }: TopicCardProps) {
     <button
       type="button"
       onClick={onClick}
-      className="w-full min-h-[100px] rounded-xl border border-zinc-200 bg-white p-6 text-left shadow-sm transition hover:border-zinc-300 hover:shadow focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 active:scale-[0.99]"
+      className="w-full min-h-[100px] rounded-xl bg-[#282828] p-6 text-left transition hover:bg-[#3e3e3e] focus:outline-none focus:ring-2 focus:ring-[#1db954] focus:ring-offset-2 focus:ring-offset-[#121212] active:scale-[0.99] group"
       aria-label={`Start quiz: ${title}`}
     >
-      <h2 className="text-xl font-semibold text-zinc-900">{title}</h2>
-      <p className="mt-1 text-sm text-zinc-500">{count} words</p>
+      <h2 className="text-xl font-semibold text-white group-hover:text-[#1db954] transition-colors">
+        {title}
+      </h2>
+      <p className="mt-1 text-sm text-[#b3b3b3]">{count} words</p>
     </button>
   );
 }
